@@ -1,10 +1,18 @@
 import { Link } from '@remix-run/react';
 
+import homesStyles from '~/styles/home.css';
+
 export default function Index() {
   return (
-    <>
-    <h1>Hello, from Remix!!!</h1>
-    <Link to="/demo">Go to Demo Page</Link>
-    </>
+    <main id="content">
+    <h1>A better way of tracking your notes</h1>
+    <p id="cta">
+      <Link to="/notes">Try Now!!!</Link>
+    </p>
+    </main>
   );
+}
+
+export function links() {
+  return [{rel: 'stylesheet', href: homesStyles}]
 }
